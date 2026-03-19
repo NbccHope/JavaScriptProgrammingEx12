@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="app.js" defer></script>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            padding: 20px;
+        }
+
+        .form,
+        .container {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        .container {
+            align-items: center;
+        }
+
+        .form button {
+            margin-top: 10px;
+        }
+
+        .error {
+            color: red;
+            display: none;
+        }
+
+        .show {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <form class="form" novalidate>
+        <label for="firstName">First Name</label>
+        <div id="firstNameError" class="error">First name is required</div>
+        <input type="text" name="firstName" required>
+        <label for="lastName">Last Name</label>
+        <div id="lastNameError" class="error">Last name is required</div>
+        <input type="text" name="lastName" required>
+        <button>Submit</button>
+    </form>
+    <div class="container">
+        <div id="firstName"></div>
+        <div id="lastName"></div>
+    </div>
+</body>
+
+</html>
